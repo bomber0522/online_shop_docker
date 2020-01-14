@@ -1,0 +1,6 @@
+<% provide(:title, "ニュース新規掲載") %>
+<div class="news-article-create">ニュース記事新規掲載</div>
+<%= form_for [:admin, @article] do |form| %>
+  <%= render "form", form: form %>
+  <div><%= form.submit '登録', class: 'btn btn-primary' %></div>
+<% end %>

@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password:
+  pool: 5
+
+development:
+  <<: *default
+  database: online_shop_docker_development
+
+test:
+  <<: *default
+  database: online_shop_docker_test
+
+production:
+  <<: *default
+  database: online_shop_docker_production
+  username: online_shop_docker
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>

@@ -1,0 +1,27 @@
+<% provide(:title, "Log in") %>
+<div class="login-title">ログイン</div>
+<%= form_for(:session, url: login_path) do |f| %>
+<table class="attr" border="2">
+  <tr>
+    <th class="profile-user"><%= f.label :email %></th>
+  </tr>
+  <tr>
+    <td class="profile-user"><%= f.email_field :email, class: 'form-control' %></td>
+  </tr>
+  <tr>
+    <th class="profile-user">
+      <%= f.label :password, {class: 'password-label'} %>
+      <%= link_to "(forgot password)", :new_password_reset %>
+    </th>
+  </tr>
+  <tr>
+    <td class="profile-password">
+      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+      <div class="check-box"><%= f.check_box :remember_me, :class => "chkbox" %><span class="remember">Remember me on this computer</span></div>
+    </td>
+  </tr>
+  <% end %>
+</table>
+  <%= f.submit "LOGIN", class: "btn btn-primary" %>
+<% end %>

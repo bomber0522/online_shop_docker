@@ -1,0 +1,33 @@
+<% provide(:title, "Articles") %>
+<div class="article-show">
+    <h1>新着情報一覧</h1>
+
+  <div class="article-new"><%= link_to "新規作成", :new_admin_article %></div>
+
+  <% if @articles.present? %>
+    <table class="list" border="1">
+      <thead>
+        <tr>
+          <th class="admin-article-title">タイトル</th>
+          <th class="admin-article-date">日時</th>
+          <th class="article-control">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each do |article| %>
+        <tr>
+            <td><%= link_to article.title, [:admin, article] %></td>
+            <td class="admin-article-date"><%= article.released_at.strftime("%Y/%m/%d %H:%M") %></td>
+            <td class="article-control">
+              <%= link_to "編集", [:edit, :admin, article] %> |
+              <%= link_to "削除", [:admin, article], method: :delete,
+                data: { confirm: "本当に削除しますか？" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @articles %>
+<% else %>
+  <p>ニュースがありません。</p>
+<% end %>

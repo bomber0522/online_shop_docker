@@ -1,0 +1,188 @@
+@media screen and (min-width:780px) and ( max-width:812px) {
+  /* 表：一覧表示、詳細表示 */
+  table.list {
+    font-size: $members_page_font;
+    width: 91%;
+    margin-left: 10px;
+  }
+  table.profile-con {
+    margin-top: -15px;
+    font-size: $members_page_font;
+    width: 91%;
+    margin-left: 10px;
+  }
+  .profile-user {
+    text-align: center;
+  }
+  .prof-content {
+    height: 150px;
+    padding-left: 15px;
+  }
+  table.profile-con th {
+    background-color: $table_middle_purple;
+    color: white;
+    font-weight: normal;
+  }
+  table.profile-con td {
+    background-color: $table_light_purple;
+  }
+  table.attr {
+    font-size: 160%;
+    width: 91%;
+    margin-left: 10px;
+  }
+  table.list th {
+    background-color: $table_middle_purple;
+    color: white;
+    font-weight: normal;
+  }
+  table.attr th {
+    background-color: $table_middle_purple;
+    color: white;
+    font-weight: normal;
+    width: 150px;
+  }
+  table.list td, table.list th,
+  table.attr td, table.attr th {
+    padding: 4px;
+  }
+  table.list th {
+    text-align: center;
+  }
+  table.attr th {
+    text-align: center;
+  }
+  table.list td, table.attr td {
+    background-color: $table_light_purple;
+  }
+  .member-only {
+    margin-bottom: 6px;
+  }
+  .no-exp {
+    font-weight: normal;
+    margin-bottom: 0px;
+  }
+  .attached {
+    text-align: center;
+  }
+  .user-name {
+    text-align: center;
+    width:200px;
+  }
+  .user-pic {
+    text-align: center;
+    width: 115px;
+  }
+  .all-members {
+    padding-left: 310px;
+  }
+  .admin-user-pic {
+    width: 115px;
+  }
+  .admin-user-profile {
+    width: 300px;
+  }
+  .user-control {
+    width: 90px;
+    text-align: center;
+  }
+  .article-control {
+    width: 190px;
+    text-align: center;
+  }
+  .admin-article-title {
+    width: 340px;
+  }
+  .admin-article-date {
+    width: 200px;
+    text-align: center;
+  }
+  .member-only {
+    height: 60px;
+  }
+  .article-expired {
+    padding-top: 20px;
+    height: 160px;
+  }
+  .article-chk {
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  .article-name {
+    height: 100px;
+  }
+  .pic-inf {
+    height: 100px;
+  }
+}
+  
+@media screen and (min-width:1281px) {
+  /* 表：一覧表示、詳細表示 */
+  table.list, table.attr {
+    font-size: 90%;
+    width: 100%;
+  }
+  table.profile-con {
+    font-size: 90%;
+    width: 100%;
+  }
+  .profile-user {
+    height: 35px;
+    background-color: $table_middle_purple;
+    color: white;
+    font-weight: normal;
+    padding-left: 20px;
+  }
+  .prof-content {
+    height: 100px;
+    background-color: $table_light_purple;
+    padding-left: 5px;
+  }
+  table.profile-con th {
+    background-color: $table_middle_purple;
+    color: white;
+    font-weight: normal;
+  }
+  table.profile-con td {
+    background-color: $table_light_purple;
+  }
+  table.list th, table.attr th {
+    background-color: $table_middle_purple;
+    color: white;
+    font-weight: normal;
+  }
+  table.list td, table.list th,
+  table.attr td, table.attr th {
+    padding: 4px;
+  }
+  table.list td {
+    border-bottom: 1px #16b89a dashed;
+  }
+  table.list th {
+    text-align: center;
+  }
+  table.attr th {
+    text-align: center;
+  }
+  table.list td, table.attr td {
+    background-color: $table_light_purple;
+  }
+  .member-only {
+    margin-bottom: 6px;
+  }
+  .no-exp {
+    font-weight: normal;
+    margin-bottom: 0px;
+  }
+  .attached {
+    text-align: center;
+  }
+  .user-name {
+    width: 90px;
+    text-align: center;
+  }
+  .user-pic {
+    width: 100px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,9 @@
+<%= image_tag "coollogo_com-21817846.png", size: "272x48", alt: "NM Helth Food Web Shop", :class => "logos" %>
+
+<%=
+  if controller.kind_of?(Admin::Base)
+    render "shared/admin_menubar"
+  else
+    render "shared/menubar"
+  end
+%>

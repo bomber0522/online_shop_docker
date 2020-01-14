@@ -1,0 +1,26 @@
+<% provide(:title, 'All members') %>
+<h1 class="all-members">会員一覧</h1>
+
+<table class="list" border="1">
+  <thead>
+    <tr>
+      <th class="user-name">ユーザー名</th>
+      <th class="user-pic">画像</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td class="user-name">
+          <%= link_to member.name, member %>
+        </td>
+        <td class="user-pic">
+            <% if member.profile_picture.attached? %>
+            <%= image_tag member.profile_picture.variant(resize: 50) %>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%= paginate @members %>

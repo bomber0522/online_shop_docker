@@ -1,0 +1,7 @@
+<% unless logged_in? %>
+  <h2 class="btn-button"><%= link_to "Sign up!", :signup, class: "btn btn-info" %></h2>
+<% end %>
+
+<% unless logged_in? %>
+  <h2 class="btn-login"><%= link_to "Login", login_path, class: "btn btn-default" %></h2>
+<% end %>

@@ -1,0 +1,63 @@
+<%= render "shared/errors", obj: @article %>
+
+<table class="attr" border="1">
+  <tr>
+    <th class="profile-user" colspan="2">画像を選択</th>
+  </tr>
+  <tr>
+    <td class="profile-user" colspan="2">
+      <%= form.file_field :new_info_picture, :class => "btn btn-form" %>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2" class="profile-user"><%= form.label :new_info_picture %></th>
+  </tr>
+  <tr>
+    <td class="prof-content" colspan="2">
+      <% if @article.info_picture.attached? %>
+      <div class="image-pic">
+          <%= image_tag @article.info_picture.variant(resize: "128x128") %>
+          <%= form.check_box :remove_info_picture, :class => "chkbox" %>
+          <%= form.label :remove_info_picture %>
+      </div>
+      <% else %>
+        <div class="no-pic">画像はありません。</div>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <th class="article-name" width="100"><%= form.label :title %></th>
+    <td><%= form.text_field :title, size: 44, :class => "image-field" %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :body %></th>
+    <td><%= form.text_area :body, rows: 10, cols: 45, :class => "image-field" %></td>
+  </tr>
+  <tr>
+    <th class="start-date"><%= form.label :released_at, for: "article_released_at_1i" %></th>
+    <td><%= form.datetime_select :released_at,
+              start_year: 2000, end_year: Time.current.year + 1,
+              use_month_numbers: true %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :expired_at, for: "article_expired_at_1i" %></th>
+    <td class="article-expired">
+      <div class="article-chk">
+        <%= form.check_box :no_expiration, :class => "chkbox" %>
+        <%= form.label :no_expiration, {class: 'no-exp'} %>
+      </div>
+      <div class="article_expired_at">
+        <%= form.datetime_select :expired_at,
+          start_year: 2000, end_year: Time.current.year + 1,
+          use_month_numbers: true %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th class="member-only"><%= Article.human_attribute_name(:member_only) %></th>
+    <td>
+      <div class="chk"><%= form.check_box :member_only, :class => "chkbox" %></div>
+      <%= form.label :member_only, {class: 'member-only'} %>
+    </td>
+  </tr>
+</table>

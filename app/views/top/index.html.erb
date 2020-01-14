@@ -1,0 +1,13 @@
+<% provide(:title, "Home") %>
+<% unless logged_in? %>
+  <h2 class="info1">会員限定ページはサインアップ！</h2>
+  <div class="info2">認証メールが届きますのでActivateをクリックしてください。</div>
+<% end %>
+<h3 class="top-title">新着情報</h3>
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <p>
+    <%= truncate article.body, length: 80 %>
+    <%= link_to "もっと読む", article %>
+  </p>
+<% end %>

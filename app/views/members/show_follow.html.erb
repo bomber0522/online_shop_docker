@@ -1,0 +1,50 @@
+<% provide(:title, @title) %>
+<table class="attr" border="2">
+  <tr>
+    <th class="member-profile-pic">画像</th>
+    <td class="member-set-pic">
+      <% if @member.profile_picture.attached? %>
+      <%= image_tag @member.profile_picture.variant(resize: "128x128") %>
+    <% end %>
+    </td>
+  </tr>
+  <tr>
+    <th class="user-profile" width="100">ユーザー名</th>
+    <td class="member-name"><%= @member.name %></td>
+  </tr>
+  <tr>
+    <th class="user-profile">ブログ投稿数</th>
+    <td class="member-name"><%= @member.entries.count %></td>
+  </tr>
+  <tr>
+    <th class="member-profile-pic">フォロー<br>フォロワー</th>
+    <td class="follow-unfollow"><%= render 'shared/stats' %></td>
+  </tr>
+</table>
+
+    <td><%= link_to "プロフィールを見る", @member, class: "profile-show" %></td>
+  </tr>
+</table>
+
+    <div><h1 id="relationship-title"><%= @title %></h1></div>
+<table class="list" border="1">
+  <thead>
+    <tr>
+      <th class="user-name">ユーザー名</th>
+      <th class="user-pic">画像</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |member| %>
+  <tr>
+    <td class="user-name"><%= link_to member.name, member %></td>
+    <td class="user-pic">
+      <% if member.profile_picture.attached? %>
+      <%= image_tag member.profile_picture.variant(resize: 50) %>
+    <% end %>
+    </td>
+  </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @members %>

@@ -1,0 +1,29 @@
+<% provide(:title, '会員管理') %>
+<div class="admin-user-title">会員管理</div>
+
+<table class="list" border="1">
+  <thead>
+    <tr>
+      <th class="user-name">ユーザー名</th>
+      <th class="admin-user-pic">画像</th>
+      <th class="user-control">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td class="user-name"><%= link_to member.name, member %></td>
+        <td class="user-pic">
+          <% if member.profile_picture.attached? %>
+            <%= image_tag member.profile_picture.variant(resize: 50) %>
+          <% end %>
+        </td>
+        <td class="user-control">
+          <%= link_to "削除", [:admin, member], method: :delete,
+            data: { confirm: "本当に削除しますか?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @members %>

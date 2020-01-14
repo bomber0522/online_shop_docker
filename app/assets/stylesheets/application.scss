@@ -1,0 +1,613 @@
+@import "config/colors";
+@import "config/font-size";
+@import "admin/top";
+@import "./admin";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "./custum.scss";
+@import "./articles";
+@import "./entries";
+@import "./entry_images";
+@import "./errors";
+@import "./flash";
+@import "./header";
+@import "./members";
+@import "./pagination";
+@import "./table";
+@import "./top";
+
+@media screen and (min-width:780px) and ( max-width:812px) {
+  /* ページ全体 */
+  body {
+    width: 780px;
+    background-image: url("/body2.jpg");
+    background-size: cover;
+    color: black;
+    margin: 0; padding: 0;
+    font-family: Meiryo, sans-serif;
+  }
+  /* リンク文字 */
+  a:link { color: $dark_blue; }
+  a:visited { color: $dark_blue; }
+  a:hover { color: $dark_orange; }
+  a img { border: none; }
+  /* ブロック要素 インデックスmainなどの上下幅 */
+  p, h1, h2, h3, table, ul {
+    margin: 0 0 1em;
+  }
+  /* ナビゲーション main */
+  nav ul,
+  ul.toolbar,
+  ul.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* ヘッダーメニュー横並び */
+  nav ul li,
+  div.toolbar li,
+  ul.toolbar li,
+  ul.links li {
+    display: inline;
+  }
+  /* 全体の枠 */
+  div#container {
+    width: 780px;
+    margin: 0 auto;
+    main {
+      float:left;
+      width: 780px;
+      padding: 10px 10px 10px 0;
+      margin-left: 30px;
+      margin-top: 150px;
+    }
+  }
+  aside#sidebar {
+    float: left;
+    width: 700px;
+    background-color: $transparent_purple;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 86%;
+    margin-bottom: 50px;
+  }
+  header {
+    position: fixed;
+    border-top: 4px solid $green;
+    border-bottom: 4px solid $green;
+    width: 900px;
+    background-color: white;
+    ul.account-menu {
+      text-align: right;
+    }
+  }
+  /* フッター */
+  footer {
+    clear: both;
+    font: 25px Verdana;
+    color: $dark_green;
+    border-top: 4px solid $green;
+    text-align: center;
+    padding: 20px;
+    footer nav ul li:not(:last-child):after {
+      color: $gray;
+      content: " | ";
+      margin: 0 5px;
+    }
+  }
+  /* メニューバー */
+  nav.menubar {
+    background-color: $ocean;
+     color: yellow;
+     font-size: 25px;
+     height: 70px;
+     width: 810px;
+     padding-left: 10px;
+     padding-top: 20px;
+  }
+  .logos {
+    height: 60px;
+    width: 400px;
+  }
+  nav.menubar ul li:not(:last-child):after {
+    color: $black;
+    content: " | ";
+    margin: 0 2px;
+  }
+ 
+  nav.menubar a { text-decoration: none; }
+
+  nav.menubar a:link { color: red; }
+
+  nav.menubar a:visited { color: purple; }
+ 
+  nav.menubar a:hover {
+    color: $orange;
+    font-weight: bold;
+    nav.menubar span {
+      color: $yellow;
+      font-weight: bold;
+    }
+  }
+  /* メインコンテンツ */
+  main h1 {
+    color: red;
+    font-weight: normal;
+    font-size: 250%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 270px;
+    margin-left: -20px;
+  }
+  main h2 {
+    color: white;
+    background-color: $transparent_middle_purple;
+    width: 700px;
+    height: 50px;
+    font-size: 35px;
+    margin-left: 10px;
+    text-align: center;
+    padding-top: 5px;
+  }
+  main p {
+    font-size: 25px;
+    line-height: 1.5;
+    width: 680px;
+    margin-left: 20px;
+  }
+  ul.toolbar,
+  div.toolbar {
+    padding: 15px 70px;
+    font-size: 180%;
+    text-align: right;
+    ul.toolbar li:not(:last-child):after {
+      color: $gray;
+      content: " | ";
+      margin: 0 2px;
+    }
+  }
+  /* サイドバー */
+  form#login-form {
+    font-size: 12px;
+    form#login-form div {
+      padding: 2px;
+      text-align: center;
+      form#login-form label {
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        form#login-form input[type="text"],
+        form#login-form input[type="password"] {
+          width: 120px;
+        }
+      }
+    }
+  }
+  aside#sidebar h2 {
+    color: $light_green;
+    font-weight: bold;
+    border-bottom: 3px dotted $light_green;
+    margin-bottom: 0.5em;
+    font-size: 35px;
+    text-align: center;
+  }
+  aside#sidebar ul {
+    padding-left: 138px;
+    list-style-type: none;
+    li {
+      font-size: 25px;
+      letter-spacing: 0.3em;
+      margin-bottom: 1em;     
+    }
+  }
+  .info1 {
+    font-size: 35px;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .info2 {
+    font-size: 26px;
+    margin-top: -28px;
+    margin-left: 10px;
+  }
+  .btn-info {
+    font-size: 30px;
+    padding: 8px 20px;
+    margin-left: 0px;
+    margin-bottom: 6px;
+    border: 0 none;
+    font-weight: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 13px;
+  }
+  .btn-default {
+    font-size: 30px;
+    padding: 8px 20px;
+    width:180px;
+    margin-left: 0px;
+    margin-top: -36px;
+    border: 0 none;
+    font-weight: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: white;
+  }
+  .btn-login {
+    height: 70px;
+    padding-top: 18px;
+    margin-left: -2px;
+  }
+  .btn-primary {
+    font-size: 30px;
+    margin-left: 11px;
+    margin-bottom: 10px;
+  }
+  .btn-success {
+    font-size: 30px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+  }
+  .btn-danger {
+    font-size: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+  .password-label {
+    margin-top: 7px;
+  }
+  .profile-pic {
+    margin-bottom: 5px;
+  }
+  .form-control {
+    height: 45px;
+    margin-bottom: 0px;
+    width: 450px;
+    margin-left: 130px;
+  }
+  .check-box {
+    margin-left: 155px;
+    padding-top: 10px;
+  }
+  .member-name {
+    width: 300px;
+    font-size: 50px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .member-profile-pic {
+    font-size: 30px;
+    height: 130px;
+  }
+  .member-set-pic {
+    text-align: center;
+  }
+  .box-picture {
+    margin-bottom: 0px;
+  }
+  .profile-show {
+    font-size: 30px;
+    float: right;
+    margin-top: -15px;
+    margin-right: 65px;
+  }
+  #relationship-title {
+    color: blue;
+    margin-top: 100px;
+    background-color: $transparent_dark_green;
+    width: 210px;
+    font-size: 45px;
+    height: 70px;
+    padding: 9px;
+    padding-left: 9px;
+    margin-left: 10px;
+    border: 2px solid $transparent_dark_purple;
+    .relationship-name {
+      letter-spacing: 4px;
+      text-align: center;
+    }
+  }
+  .dropdown-menu {
+     font-size: 25px;
+   }
+  .blog-count {
+    width: 200px;
+    text-align: center;
+  }
+  .about-content {
+    color: red;
+    font-size: 28px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-left: -10px;
+    background-color: $transparent_dark_green;
+    text-align: center;
+    padding-left: 8px;
+  }
+  .back-top {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+  .chkbox {
+	width: 24px;
+	height: 24px;
+	-moz-transform: scale(1.4);
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
+  }
+  .chk {
+   display: inline-block;
+   padding-left: 20px;
+   padding-top: 30px;
+  }
+  .start-date {
+    height: 150px;
+    }
+  select {
+    margin-left: 6px;
+    margin-right: 6px;
+    }
+  span.remember {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  /* ページ全体 */
+  body {
+    background-image: url("/body2.jpg");
+    background-size: cover;
+    color: black;
+    margin: 0; padding: 0;
+    font-family: Meiryo, sans-serif;
+  }
+  /* リンク文字 */
+  a:link { color: $dark_blue; }
+  a:visited { color: $dark_blue; }
+  a:hover { color: $dark_orange; }
+  a img { border: none; }
+  /* ブロック要素 インデックスmainなどの上下幅 */
+  p, h1, h2, h3, table, ul {
+    margin: 0 0 1em;
+  }
+  /* ナビゲーション main */
+  nav ul,
+  ul.toolbar,
+  ul.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* ヘッダーメニュー横並び */
+    nav ul li,
+    div.toolbar li,
+    ul.toolbar li,
+    ul.links li {
+      display: inline;
+  }
+/* 全体の枠 */
+  div#container {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 880px;
+    main {
+      float: left;
+      width: 530px;
+      padding: 10px 10px 10px 0;
+    }
+  }
+/* 右の枠（サイドバーを入れる） */
+  aside#sidebar {
+    float: left;
+    width: 350px;
+    background-color: $transparent_purple;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 86%;
+  }
+  /* ヘッダー */
+  header {
+    border-top: 4px solid $green;
+    border-bottom: 4px solid $green;
+    ul.account-menu {
+      text-align: right;
+    }
+  }
+  /* フッター */
+  footer {
+    clear: both;
+    font: 15px Verdana;
+    color: $dark_green;
+    border-top: 4px solid $green;
+    text-align: center;
+    nav ul li:not(:last-child):after {
+      color: $gray;
+      content: " | ";
+      margin: 0 5px;
+    }
+  }
+  /* メニューバー */
+  nav.menubar {
+    padding: 6px;
+    background-color: $transparent_deep_green;
+    color: yellow;
+    font-size: 100%;
+    padding: 7px 25px;
+  }
+  nav.menubar ul li:not(:last-child):after {
+    color: $black;
+    content: " | ";
+    margin: 0 2px;
+  }
+  /* メニューバーのリンク */
+  nav.menubar a { text-decoration: none; }
+  /* メニューバーのリンク（未訪問） */
+  nav.menubar a:link { color: red; }
+  /* メニューバーのリンク（訪問済） */
+  nav.menubar a:visited { color: purple; }
+  /* メニューバーのリンク（マウスを合わせたとき） */
+  nav.menubar a:hover {
+    color: $orange;
+    font-weight: bold;
+    span {
+      color: $yellow;
+      font-weight: bold;
+    }
+  }
+  /* メインコンテンツ */
+  main h1 {
+    color: red;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  main h2 {
+    color: white;
+    background-color: $transparent_middle_purple;
+  }
+  main p {
+    font-size: 90%;
+    line-height: 1.5;
+  }
+  ul.toolbar,
+  div.toolbar {
+    padding: 15px 0;
+    font-size: 90%;
+    text-align: right;
+  }
+  ul.toolbar li:not(:last-child):after {
+    color: $gray;
+    content: " | ";
+    margin: 0 2px;
+  }
+  /* サイドバー */
+  form#login-form {
+    font-size: 12px;
+    div {
+      padding: 2px;
+      text-align: center;
+      label {
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        input[type="text"],
+        input[type="password"] {
+          width: 120px;
+        }
+      }
+    }
+  }
+  aside#sidebar h2 {
+    color: $light_green;
+    font-weight:lighter;
+    border-bottom: 1px dotted $light_green;
+    margin-bottom: 0.5em;
+    font-size: 30px;
+  }
+  aside#sidebar ul {
+    padding-left: 1em;
+    list-style-type: none;
+    li {
+      font-size: 15px;
+      letter-spacing: 0.3em;
+      margin-bottom: 0.3em;
+    }
+  }
+  .info2 {
+    margin-top: -28px;
+  }
+  .btn-info {
+    padding: 8px 20px;
+    margin-left: 120px;
+    margin-bottom: 6px;
+    border: 0 none;
+    font-weight: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .btn-default {
+    padding: 8px 20px;
+    width:110px;
+    margin-left: 120px;
+    margin-top: -24px;
+    border: 0 none;
+    font-weight: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: white;
+  }
+  .btn-primary {
+    margin-top: 5px;
+  }
+  .btn-success {
+    margin-bottom: 5px;
+  }
+  .btn-danger {
+    margin-bottom: 5px;
+  }
+  .password-label {
+    margin-top: 7px;
+  }
+  .profile-pic {
+    margin-bottom: 5px;
+    }
+  .form-control {
+    margin-bottom: 10px;
+  }
+  .member-name {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+  .box-picture {
+    margin-bottom: 0px;
+  }
+  .profile-show {
+    float: right;
+    margin-top: -8px;
+    margin-right: 10px;
+  }
+  .chk {
+    display: inline;
+  }
+  .check-box {
+    margin-left: 140px;
+  }
+  #relationship-title {
+    color: blue;
+    background-color: $transparent_dark_green;
+    width: 106px;
+    text-align: center;
+    height: 30px;
+    padding-bottom: 9px;
+    border: 2px solid $transparent_dark_purple;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    .relationship-name {
+      letter-spacing: 4px;
+      text-align: center;
+    }
+  }
+  .blog-count {
+  padding-left: 20px;
+  }
+  .about-content {
+    color: red;
+    font-size: 130%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-left: -10px;
+    background-color: $transparent_dark_green;
+    text-align: center;
+    padding-left: 8px;
+  }
+  .back-top {
+    font-size: 15px;
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+  span.remember {
+    color: black;
+  }
+}

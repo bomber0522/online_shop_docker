@@ -1,0 +1,130 @@
+@media screen and (min-width:780px) and ( max-width:812px) {
+  main ul.entry-footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: 3px #16b89a dashed;
+    padding-top: 4px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 185%;
+    width: 700px;
+    margin-left: 10px;
+    li {
+      display: inline;
+    }
+  }
+  main ul.entry-footer li:not(:last-child):after {
+    color: #444;
+    content: " | ";
+    margin: 0 2px;
+  }
+
+  /* 投票 */
+  main span.vote,
+  main p.vote {
+    color: red;
+  }
+
+  span.vote a.button,
+  p.vote a.button {
+    border: 1px solid #ccf;
+    padding: 0 3px;
+    color: $light_purple;
+    background-color: #eef;
+    text-decoration: none;
+  }
+  .button {
+    display: block;
+    font-size: 25px;
+    padding-left: 25px;
+    margin-top: 0px;
+    padding-bottom: 40px;
+  }
+  .entries-show {
+    padding-left: 245px;
+  }
+  .voted-record {
+    font-size: 200%;
+    padding-left: 18px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+  }
+  .voted-index {
+    font-size: 200%;
+    padding-top: 10px;
+  }
+  .voted-blogs {
+    color: red;
+    font-weight: normal;
+    font-size: 250%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 200px;
+    margin-left: -20px;
+  }
+  .blog {
+    color: red;
+    font-weight: normal;
+    font-size: 250%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 220px;
+    margin-left: -20px;
+  }
+}
+
+@media screen and (min-width:1281px) {
+main ul.entry-footer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px #16b89a dashed;
+  padding-top: 4px;
+  margin-bottom: 15px;
+  text-align: right;
+  font-size: 75%;
+  li {
+    display: inline;
+  }
+}
+
+// main ul.entry-footer li {
+//   display: inline;
+// }
+
+  main ul.entry-footer li:not(:last-child):after {
+  color: #444;
+  content: " | ";
+  margin: 0 2px;
+}
+
+/* 投票 */
+main span.vote,
+main p.vote {
+  color: red;
+}
+
+span.vote a.button,
+p.vote a.button {
+  border: 1px solid #ccf;
+  padding: 0 3px;
+  color: $light_purple;
+  background-color: #eef;
+  text-decoration: none;
+  }
+  .blog {
+    color: red;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .voted-blogs {
+    color: red;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+}

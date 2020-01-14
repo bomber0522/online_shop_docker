@@ -1,0 +1,18 @@
+<% provide(:title, "Articles") %>
+    <h1>新着情報一覧</h1>
+
+<% if @articles.present? %>
+  <% @articles.each do |article| %>
+    <h2><%= article.title %></h2>
+    <p>
+      <%= truncate(article.body, length: 80) %>
+      <%= link_to "もっと読む", article %>
+    </p>
+    <div class="article-footer">
+      <%= article.released_at.strftime("%Y/%m/%d %H:%M") %>
+    </div>
+  <% end %>
+<% else %>
+  <p>ニュースがありません。</p>
+<% end %>
+<%= paginate @articles %>

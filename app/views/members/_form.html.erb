@@ -1,0 +1,59 @@
+<%= form_for(@member) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+<table class="attr" border="2">
+  <tr>
+    <th class="profile-user" colspan="2">画像を選択</th>
+  </tr>
+  <tr>
+    <td class="profile-user" colspan="2"><%= f.file_field :new_profile_picture, :class => "btn btn-form" %></td>
+  </tr>
+  <tr>
+    <th class="profile-user" colspan="2"><%= f.label :new_profile_picture %></th>
+  </tr>
+  <tr>
+    <td class="prof-content" colspan="2">
+      <% if @member.profile_picture.attached? %>
+        <div class="image-pic">
+          <%= image_tag @member.profile_picture.variant(resize: "128x128") %>
+          <%= f.check_box :remove_profile_picture, :class => "chkbox" %>
+          <%= f.label :remove_profile_picture %>
+        </div>
+      <% else %>
+        <div class="no-pic">画像はありません。</div>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <th class="profile-user" colspan="2"><%= f.label :password %></th>
+  </tr>
+  <tr>
+    <td class="profile-user" colspan="2"><%= f.password_field :password, class: 'form-control' %></td>
+  </tr>
+  <tr>
+    <th class="profile-user" colspan="2"><%= f.label :password_confirmation %></th>
+  </tr>
+  <tr>
+    <td class="profile-user" colspan="2"><%= f.password_field :password_confirmation, class: 'form-control' %></td>
+  </tr>
+  <tr>
+    <th class="article-name" width="100"><%= f.label :name %></th>
+    <td><%= f.text_field :name, size: 44, :class => "image-field" %></td>
+  </tr>
+  <tr>
+    <th class="article-name"><%= f.label :email %></th>
+    <td><%= f.email_field :email, size: 44, :class => "image-field" %></td>
+  </tr>
+</table>
+
+<table class="attr" border="2">
+  <tr>
+    <th class="profile-user"><%= f.label :profile %></th>
+  </tr>
+  <tr>
+    <td><%= f.text_area :profile, rows: 5, cols: 45, :class => "profile-body" %></td>
+  </tr>
+</table>
+
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

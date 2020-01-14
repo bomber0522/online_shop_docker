@@ -1,0 +1,120 @@
+@media screen and (min-width:780px) and ( max-width:812px) {
+  .user-profile {
+    height: 100px;
+    font-size: $user_group_font;
+  }
+  .follow-status {
+    font-size: $user_group_font;
+    height: 130px;
+  }
+  .follow-unfollow {
+    font-size: 35px;
+  }
+  .following-link {
+    text-align: center;
+  }
+  .user-following {
+    padding-left: 160px;
+  }
+  .user-followers {
+    padding-left: 160px;
+  }
+  .profile-user {
+    height: 70px;
+    font-size: $user_group_font;
+  }
+  .prof-content {
+    font-size: $user_group_font;
+  }
+  .profile-head {
+    color: red;
+    font-weight: normal;
+    font-size: $members_page_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 295px;
+    margin-left: -20px;
+  }
+  .member-profile-edit {
+    color: red;
+    font-weight: normal;
+    font-size: $members_page_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 230px;
+    margin-left: -20px;
+  }
+  .profile-body {
+    margin-left: 115px;
+    margin-top: 5px;
+  }
+  .login-title {
+    color: red;
+    font-weight: normal;
+    font-size: $members_page_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 320px;
+    margin-left: -20px;
+  }
+  .forget {
+    color: red;
+    font-weight: normal;
+    font-size: $members_page_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 210px;
+    margin-left: -20px;
+  }
+  .reset-title {
+    color: red;
+    font-weight: normal;
+    font-size: $members_page_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 270px;
+    margin-left: -20px;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .profile-head {
+    color: red;
+    font-weight: normal;
+    font-size: $members_mobile_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .member-profile-edit {
+    color: red;
+    font-weight: normal;
+    font-size: $members_mobile_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .profile-body {
+    margin-left: 85px;
+    margin-top: 5px;
+  }
+  .login-title {
+    color: red;
+    font-weight: normal;
+    font-size: $members_mobile_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .forget {
+    color: red;
+    font-weight: normal;
+    font-size: $members_mobile_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .reset-title {
+    color: red;
+    font-weight: normal;
+    font-size: $members_mobile_font;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+}

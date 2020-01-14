@@ -1,0 +1,33 @@
+<% provide(:title, @member.name) %>
+<div class="profile-head">プロフィール</div>
+<%= render 'follow_form' if logged_in? %>
+<table class="attr" border="1">
+  <thead>
+    <tr>
+      <th class="user-profile" width="100">ユーザー名</th>
+      <td class="member-name">
+        <%= @member.name %>
+      </td>
+    </tr>
+    <tr>
+      <th class="member-profile-pic">画像</th>
+      <td class="member-set-pic">
+        <% if @member.profile_picture.attached? %>
+        <%= image_tag @member.profile_picture.variant(resize: "128x128") %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th class="follow-status">フォロー<br>フォロワー</th>
+      <td class="follow-unfollow">
+        <%= render 'shared/stats' %>
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2" class="profile-user">自己紹介</th>
+    </tr>
+    <tr>
+      <td colspan="2" class="prof-content"><%= @member.profile %></td>
+    </tr>
+  </thead>
+</table>

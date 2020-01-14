@@ -1,0 +1,95 @@
+@media screen and (min-width:780px) and ( max-width:812px) {
+  div.article-footer {
+    border-top: 2px red dashed;
+    padding-top: 4px;
+    text-align: right;
+    font-size: 190%;
+    margin-left: -15px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+  }
+  .news-show {
+    padding-left: 150px;
+  }
+   .news-article-create {
+     color: red;
+     font-weight: normal;
+     font-size: 250%;
+     border-bottom: 3px solid $light_purple;
+     margin-bottom: 0.5em;
+     padding-left: 220px;
+     margin-left: -20px;
+  }
+  .edit-articles-news {
+    color: red;
+    font-weight: normal;
+    font-size: 250%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 230px;
+    margin-left: -20px;
+  }
+  .back-show {
+    font-size: 30px;
+    .article-edit {
+      padding-top: 10px;
+    }
+  }
+  .news-show-title {
+    color: red;
+    font-weight: normal;
+    font-size: 250%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+    padding-left: 160px;
+    margin-left: -20px;
+  }
+  .back-edit {
+    font-size: 250%;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+  }
+  .no-pic {
+    text-align: center;
+    .imgage-pic {
+      text-align: center;
+    }
+  }
+}
+  
+@media screen and (min-width:1281px) {
+  div.article-footer {
+    border-top: 1px red dashed;
+    padding-top: 4px;
+    text-align: right;
+    font-size: 75%;
+  }
+  .edit-articles-news {
+    color: red;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .news-article-create {
+    color: red;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+  .no-pic {
+    text-align: center;
+  }
+  .image-pic {
+    text-align: center;
+  }
+  .news-show-title {
+    color: red;
+    font-weight: normal;
+    font-size: 150%;
+    border-bottom: 3px solid $light_purple;
+    margin-bottom: 0.5em;
+  }
+}

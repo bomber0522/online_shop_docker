@@ -1,0 +1,12 @@
+<% provide(:title, @article.title) %>
+<h1 class="news-show"><%= @article.title %></h1>
+<p>
+<% if @article.info_picture.attached? %>
+  <%= image_tag @article.info_picture.variant(resize: "200x200") %>
+<% end %>
+</p>
+<%= auto_link simple_format(@article.body) %>
+
+<div class="article-footer">
+  <%= @article.released_at.strftime("%Y/%m/%d %H:%M") %>
+</div>

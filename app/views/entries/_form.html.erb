@@ -1,0 +1,22 @@
+<%= render "shared/errors", obj: @entry %>
+
+<table class="attr" border="1">
+  <tr>
+    <th width="100"><%= form.label :title %></th>
+    <td><%= form.text_field :title, size: 44, :class => "image-field" %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :body %></th>
+    <td><%= form.text_area :body, rows: 10, cols: 45, :class => "image-field" %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :posted_at, for: "entry_posted_at_1i" %></th>
+    <td><%= form.datetime_select :posted_at,
+              start_year: 2000, end_year: Time.current.year + 1,
+              use_month_numbers: true %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :status %></th>
+    <td><%= form.select :status, Entry.status_options %></td>
+  </tr>
+</table>

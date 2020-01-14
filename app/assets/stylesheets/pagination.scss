@@ -1,0 +1,29 @@
+@media screen and (min-width:780px) and ( max-width:812px) {
+  $border-color: #499;
+    nav.pagination {
+      font-size: 200%;
+      height: 60px;
+      padding: 4px 8px;
+      border: 2px solid $border-color;
+      word-spacing: 15px;
+      margin-left: 10px;
+      margin-top: -10px;
+      margin-bottom: 50px;
+      span.current {
+        font-weight: bold;
+      }
+    }
+  }
+  
+  @media screen and (min-width:1281px) {
+    $border-color: #499;
+    nav.pagination {
+      font-size: 75%;
+      padding: 4px 8px;
+      border: 1px solid $border-color;
+      word-spacing: 4px;
+    span.current {
+        font-weight: bold;
+      }
+    }
+  }

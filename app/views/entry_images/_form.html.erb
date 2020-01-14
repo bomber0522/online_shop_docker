@@ -1,0 +1,12 @@
+<% render "shared/errors", obj: @image %>
+
+<table class="attr" border="2">
+  <tr>
+    <th class="pic-info" width="100"><%= form.label :new_data %></th>
+    <td><%= form.file_field :new_data, :class => "btn btn-data" %></td>
+  </tr>
+  <tr>
+    <th class="article-name"><%= form.label :alt_text %></th>
+    <td><%= form.text_field :alt_text, size: 40, :class => "image-field" %></td>
+  </tr>
+</table>

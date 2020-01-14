@@ -1,0 +1,9 @@
+<% provide(:title, "ニュース記事の編集") %>
+<div class="edit-articles-news">ニュース記事の編集</div>
+
+<p class="article-edit"><%= link_to "記事の詳細に戻る", [:admin, @article], :class => "back-show"%></p>
+
+<%= form_for [:admin, @article] do |form| %>
+  <%= render "form", form: form %>
+  <div><%= form.submit '更新', class: 'btn btn-primary' %></div>
+<% end %>

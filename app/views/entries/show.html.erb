@@ -1,0 +1,9 @@
+<% provide(:title, @entry.author.name + "さんのブログ") %>
+<h1 class="entries-show"><%= @entry.author.name %>さんのブログ</h1>
+<h2><%= @entry.title %></h2>
+
+<%= the_first_image(@entry) %>
+<%= auto_link simple_format(@entry.body) %>
+<%= other_images(@entry) %>
+<%= render "footer", entry: @entry %>
+<%= render "votes" %>
