@@ -1,6 +1,6 @@
 FROM ruby:2.5.1-alpine
 
-ENV RUNTIME_PACKAGES="linux-headers libxml2-dev libxslt-dev make gcc libc-dev nodejs tzdata postgresql-dev postgresql" \
+ENV RUNTIME_PACKAGES="vim linux-headers libxml2-dev libxslt-dev make gcc libc-dev nodejs tzdata postgresql-dev postgresql" \
     DEV_PACKAGES="build-base curl-dev" \
     HOME="/online_shop_docker"
 
